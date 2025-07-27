@@ -4,6 +4,6 @@
 
 {{ range site.Params.custom_css }}
   {{ with partials.IncludeCached "func/style/GetResource.html" . . }}{{ else }}
-    <link rel="stylesheet" href="{{ urls.RelURL (.) }}">
+    <link rel="stylesheet" href="{{ urls.AbsURL (.) }}">
   {{ end }}
 {{ end }}
